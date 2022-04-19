@@ -118,6 +118,18 @@ const createUserNames = function (acc) {
 createUserNames(accounts);
 // console.log(accounts);
 
+let currentAccount;
+// Event Listeners
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('LOGIN BUTTON CLICKED');
+
+  currentAccount = accounts.find(
+    acc => acc.userName === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
